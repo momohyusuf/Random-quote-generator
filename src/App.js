@@ -1,6 +1,6 @@
 import DisplayQuotes from './displayQuotes';
 import { useEffect, useState } from 'react';
-import { AiFillTwitterSquare } from 'react-icons/ai';
+import { AiFillTwitterSquare, AiOutlineWhatsApp } from 'react-icons/ai';
 
 function App() {
   const [quotes, setQuotes] = useState([]);
@@ -31,16 +31,7 @@ function App() {
     console.log(randomNumbers);
     setValue((prevlue) => randomNumbers);
   };
-  // ************************************
-  useEffect(() => {
-    let autoQuote = setInterval(() => {
-      let randomNumbers = Math.ceil(Math.random() * quotes.length);
-      setValue((prevlue) => randomNumbers);
-    }, 4000);
-    return () => {
-      clearInterval(autoQuote);
-    };
-  }, [value]);
+
   // *************************************************************************
 
   if (isLoading) {
@@ -68,7 +59,14 @@ function App() {
             rel="noopener noreferrer"
             title="share on twitter"
           >
-            <AiFillTwitterSquare id="tweet-quote" />
+            <AiFillTwitterSquare class="tweet-quote" />
+          </a>
+          <a
+            href={`whatsapp://send?text=${quotes[value].text}" ${quotes[value].author}`}
+            data-action="share/whatsapp/share"
+            target="_blank"
+          >
+            <AiOutlineWhatsApp className="tweet-quote" />
           </a>
         </div>
       </section>

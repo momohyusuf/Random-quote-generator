@@ -16,7 +16,7 @@ body {
   @include textStyle;
 }
 #new-quote,
-#tweet-quote {
+.tweet-quote {
   @include getNewQuoteBtn;
 
   &:hover {
