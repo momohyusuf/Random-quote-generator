@@ -1,0 +1,21 @@
+@mixin body-display {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+@mixin quoteBox {
+  width: 20em;
+  max-height: 20em;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 1em;
+}
+@mixin textStyle {
+  height: 10em;
+  transition: 500ms ease-out;
+}
+
+@mixin getNewQuoteBtn {
+  padding: 0.5em;
+  border-radius: 5px;
+  cursor: pointer;
+}
