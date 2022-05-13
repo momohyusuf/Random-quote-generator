@@ -15,6 +15,9 @@ body {
 #text {
   @include textStyle;
 }
+#author {
+  font-weight: 300;
+}
 #new-quote,
 .tweet-quote {
   @include getNewQuoteBtn;
@@ -30,4 +33,9 @@ body {
 a {
   text-decoration: none;
   color: $color;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

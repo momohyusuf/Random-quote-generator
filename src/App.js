@@ -47,27 +47,30 @@ function App() {
       <section id="quote-box">
         <article>
           <h1 id="text">"{quotes[value].text}"</h1>
-          <p id="author">{quotes[value].author}</p>
+          <p id="author">-{quotes[value].author}</p>
         </article>
-        <button id="new-quote" onClick={randomQuotes}>
-          New Quote
-        </button>
-        <div>
-          <a
-            href={`http://twitter.com/intent/tweet?text="${quotes[value].text}" ${quotes[value].author}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            title="share on twitter"
-          >
-            <AiFillTwitterSquare class="tweet-quote" />
-          </a>
-          <a
-            href={`whatsapp://send?text=${quotes[value].text}" ${quotes[value].author}`}
-            data-action="share/whatsapp/share"
-            target="_blank"
-          >
-            <AiOutlineWhatsApp className="tweet-quote" />
-          </a>
+        <div className="footer">
+          <button id="new-quote" onClick={randomQuotes}>
+            New Quote
+          </button>
+          <div>
+            <a
+              href={`http://twitter.com/intent/tweet?text="${quotes[value].text}" ${quotes[value].author}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="share on twitter"
+            >
+              <AiFillTwitterSquare class="tweet-quote" />
+            </a>
+            <a
+              href={`whatsapp://send?text=${quotes[value].text}" ${quotes[value].author}`}
+              data-action="share/whatsapp/share"
+              target="_blank"
+              title="share on whatsapp"
+            >
+              <AiOutlineWhatsApp className="tweet-quote" />
+            </a>
+          </div>
         </div>
       </section>
     </main>
